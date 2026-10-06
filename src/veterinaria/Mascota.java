@@ -30,8 +30,6 @@ public class Mascota {
         this.peso = peso;
         this.duenio = duenio;
     }
-    
-    
 
     public String getNombre() {
         return nombre;
@@ -64,12 +62,15 @@ public class Mascota {
     public void setPeso(double peso) {
         this.peso = peso;
     }
-    
-    public void mostrarResumen(){
+
+    public void mostrarResumen() {
         System.out.println("Mascota: " + nombre);
         System.out.println("Especie: " + especie);
         System.out.println("Edad: " + edad);
         System.out.printf("Peso: %.2f kg%n", peso);
+        if (this.duenio != null) {
+            System.out.println("Dueño: " +  duenio.getNombre());
+        }
     }
 
     public Cliente getDuenio() {
