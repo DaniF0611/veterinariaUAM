@@ -8,7 +8,7 @@ package veterinaria;
  *
  * @author Usuario
  */
-public class Mascota {
+public class Mascota implements Resumible {
 
     private String nombre; //private: atributo en esta clase, nadie puede acceder
     private String especie; //private: atributo en esta clase, nadie puede acceder
@@ -63,6 +63,7 @@ public class Mascota {
         this.peso = peso;
     }
 
+    @Override
     public void mostrarResumen() {
         System.out.println("Mascota: " + nombre);
         System.out.println("Especie: " + especie);
